@@ -15,7 +15,6 @@
 
 html, body {
   margin: 0;
-
 }
 
 .wrapper{
@@ -166,7 +165,7 @@ html, body {
   position:fixed;
   top: 60px;
   right: 0px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -224,6 +223,8 @@ section {
   z-index: 0;
 }
 
+
+
 section img {
   position: absolute;
   top: 0;
@@ -244,7 +245,7 @@ section img {
   background: 
   linear-gradient(to left,  var(--med_light), transparent),
   linear-gradient(to right, var(--med_light), transparent);
-  z-index: -5;
+  z-index: 0;
   padding-top: 10px;
   padding-right: 35px;
   text-align: center
@@ -265,12 +266,8 @@ section img {
   font-size: 0.15em;
 }
 
-#bg2 {
-  z-index: ;
-}
-
 #me {
-  z-index: -3;
+  z-index: -2;
   position:relative;
   top: 0;
   left: 0;
@@ -280,3 +277,66 @@ section img {
   pointer-events: none;
 }
 
+section a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color:#0e2431;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+  z-index: 2;
+}
+section a:hover {
+  opacity: .5;
+}
+
+
+section a {
+  padding-top: 60px;
+}
+section a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #0e2431;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+section a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #0e2431;
+  border-bottom: 1px solid #0e2431;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+section a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
