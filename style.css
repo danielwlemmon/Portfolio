@@ -29,6 +29,8 @@ html, body {
   margin: 0;
 }
 
+/*              navbar styling             */
+
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px var(--dark);
@@ -55,13 +57,13 @@ html, body {
 .navbar .nav-container a {
   text-decoration: none;
   color: var(--dark);
-  font-weight: 500;
+  font-weight: 200;
   font-size: 1.2rem;
   padding: 0.7rem;
 }
 
 .navbar .nav-container a:hover{
-    font-weight:900;
+    font-weight:400;
     background-color: var(--light);
     border-radius: 100px;
 }
@@ -137,7 +139,7 @@ html, body {
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 100;
 }
 
 .logo {
@@ -151,22 +153,13 @@ html, body {
 }
 
 .logo h1{
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .img-container{
   width: 100%;
 }
 
-#profile {
-  max-width: 20%;
-  min-width: 20%;
-  border-radius: 50%;
-  position:fixed;
-  top: 60px;
-  right: 0px;
-  z-index: 0;
-}
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
   transform: translateX(0);
@@ -187,6 +180,19 @@ html, body {
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
 }
+
+/*                 profile pic round styling           */
+#profile {
+  max-width: 20%;
+  min-width: 20%;
+  border-radius: 50%;
+  position:fixed;
+  top: 60px;
+  right: 0px;
+  z-index: 0;
+}
+
+/*                section 1 styling and animation    */
 
 section {
   position: relative;
@@ -218,14 +224,7 @@ section {
   mix-blend-mode: color;
 }
 
-#section2{
-  background-color: var(--light);
-  z-index: 0;
-}
-
-
-
-section img {
+#section1 img {
   position: absolute;
   top: 0;
   left: 0;
@@ -236,16 +235,18 @@ section img {
   opacity: 0.5;
 }
 
+/*                Section 1 paragraph text          */
+
 #main-text {
   position: fixed;
   background-color: var(--med_light);
   font-size: 10em;
   width: 100%;
   height: 400px;
-  background: 
+  /* background: 
   linear-gradient(to left,  var(--med_light), transparent),
-  linear-gradient(to right, var(--med_light), transparent);
-  z-index: 0;
+  linear-gradient(to right, var(--med_light), transparent); */
+  z-index: -1;
   padding-top: 10px;
   padding-right: 35px;
   text-align: center
@@ -259,23 +260,40 @@ section img {
 #main-text h3{
   color: #0e2431;
   font-size: 0.3em;
+  font-weight: 300;
 }
 
 #main-text p{
   color: #0e2431;
   font-size: 0.15em;
+  font-weight: 200;
 }
 
-#me {
+/*              Section 2-4 Styling        */
+
+.sections2-4{
+  background-color: var(--light);
+  z-index: -1;
+}
+
+.section-img {
   z-index: -2;
-  position:relative;
+  position:absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   object-fit: cover;
   pointer-events: none;
+  opacity: 0.5;
 }
+
+#section3 img{
+  opacity: 80%;
+  z-index: -1;
+}
+
+/*              Scroll Buttons          */
 
 section a {
   position: absolute;
@@ -286,7 +304,7 @@ section a {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color:#0e2431;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  font : normal 400 20px/1 'Poppins', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
@@ -295,7 +313,6 @@ section a {
 section a:hover {
   opacity: .5;
 }
-
 
 section a {
   padding-top: 60px;
@@ -307,7 +324,7 @@ section a span {
   width: 46px;
   height: 46px;
   margin-left: -23px;
-  border: 1px solid #0e2431;
+  border: 2px solid #0e2431;
   border-radius: 100%;
   box-sizing: border-box;
 }
@@ -319,8 +336,8 @@ section a span::after {
   width: 16px;
   height: 16px;
   margin: -12px 0 0 -8px;
-  border-left: 1px solid #0e2431;
-  border-bottom: 1px solid #0e2431;
+  border-left: 2px solid #0e2431;
+  border-bottom: 2px solid #0e2431;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
@@ -337,6 +354,62 @@ section a span::before {
   border-radius: 100%;
   opacity: 0;
   -webkit-animation: sdb03 3s infinite;
-  animation: sdb03 3s infinite;
+  animation: sdb03 10s infinite;
   box-sizing: border-box;
+}
+
+/*            Card present animation       */
+
+
+section h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+section .container{
+  margin: 100px;
+}
+
+section .text-container{
+  display: flex;
+}
+section .text-container .text-box{
+ margin: 20px;
+ padding: 20px;
+ background: var(--med_light)
+}
+section .text-container .text-box h3{
+ font-size: 25px;
+ text-align: center;
+ text-transform: uppercase;
+ margin-bottom: 10px;
+ font-weight: 200;
+}
+
+section .text-container .text-box p{
+  font-weight: 200;
+}
+
+@media (max-width: 900px){
+ section h1{
+   font-size: 2rem;
+   text-align: center;
+ }
+ section .text-container{
+   flex-direction: column;
+ }
+}
+
+.reveal{
+ position: relative;
+ transform: translateY(150px);
+ opacity: 0;
+ transition: 1s all ease;
+}
+
+.reveal.active{
+ transform: translateY(0);
+ opacity: 1;
 }
