@@ -476,7 +476,8 @@ section .text-container .text-box p {
 }
 
 .light-btn{
-  color: var(--light)
+  color: var(--light);
+  opacity: 80%;
 }
 
 /*              Section 2-4 Styling        */
