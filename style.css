@@ -491,5 +491,12 @@ section .text-container .text-box p {
 }
 
 #section4{
-  height: 40vh;
+  align-items: flex-start;
+  height: 25vh;
+}
+
+.contact-container{
+  margin-top: 10px;
+  text-align: center;
+  width: 50%;
 }
