@@ -273,7 +273,7 @@ section {
 
 /*              Scroll Buttons          */
 
-section a {
+.scroll-button {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -290,15 +290,14 @@ section a {
   z-index: 2;
 }
 
-section a:hover {
+.scroll-button:hover {
   opacity: .5;
 }
 
-section a {
+.scroll-button  {
   padding-top: 60px;
 }
-
-section a span {
+.scroll-button span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -310,7 +309,7 @@ section a span {
   box-sizing: border-box;
 }
 
-section a span::after {
+.scroll-button span::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -325,7 +324,7 @@ section a span::after {
   box-sizing: border-box;
 }
 
-section a span::before {
+.scroll-button span::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -358,6 +357,15 @@ section .container {
 section .text-container {
   display: flex;
 }
+
+.project-link{
+  text-decoration:none;
+}
+
+.project-link:hover{
+  opacity: 80%;
+}
+
 
 section .text-container .text-box {
   margin: 20px;
@@ -435,24 +443,26 @@ section .text-container .text-box p {
   color: var(--light);
 }
 
+
 #spotify{
-  width: 100%;
+  opacity: 80%;
+  width: 100px;
+  padding-left: 37%;
+}
+#spotify:hover{
+  opacity: 100%;
 }
 
-.text-container-3 a {
-  position: relative;
-  display: flex;
-  font-size: 25px;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0;
-  top: 30px;
-  font-weight: 200;
-  width: 15%;
+.text-box-3 img{
+  padding-left: 5px;
+  padding-right: 5px;
 }
+
 
 .img-box-3 {
-  display:inline;
+  align-content: space-between;
+  display: inline-block;
+  width: 550px;
 }
 
 @media (max-width: 900px) {
@@ -464,18 +474,77 @@ section .text-container .text-box p {
 .text-box-3 img{
   opacity: 1;
   max-width: 250px;
+
+  /*   light button styling for dark background */
 }
 
-.light-btn{
+#light-btn{
   color: var(--light);
   opacity: 80%;
 }
+/* 
+.scroll-button {
+  
+  color: #0e2431;
+  
+}
+
+.scroll-button:hover {
+  opacity: .5;
+}
+
+.scroll-button  {
+  padding-top: 60px;
+}
+.scroll-button span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 2px solid #0e2431;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.scroll-button span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 2px solid #0e2431;
+  border-bottom: 2px solid #0e2431;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+.scroll-button span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 10s infinite;
+  box-sizing: border-box;
+} */
 
 /*              Section 2-4 Styling        */
 
 .sections2-4 {
   background-color: var(--light);
   z-index: -1;
+  
 }
 
 .section-img {
