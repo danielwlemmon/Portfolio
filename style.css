@@ -534,3 +534,11 @@ section .text-container .text-box p {
   text-align: center;
   width: 50%;
 }
+
+#up-arrow span::after {
+  top: 70%;
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+  
+}
+
