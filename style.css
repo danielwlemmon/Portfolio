@@ -322,6 +322,7 @@ section {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .scroll-button span::before {
@@ -478,66 +479,30 @@ section .text-container .text-box p {
   /*   light button styling for dark background */
 }
 
-#light-btn{
-  color: var(--light);
-  opacity: 80%;
-}
-/* 
-.scroll-button {
-  
-  color: #0e2431;
-  
-}
-
-.scroll-button:hover {
+#light-btn:hover{
   opacity: .5;
 }
 
-.scroll-button  {
-  padding-top: 60px;
-}
-.scroll-button span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 46px;
-  height: 46px;
-  margin-left: -23px;
-  border: 2px solid #0e2431;
-  border-radius: 100%;
-  box-sizing: border-box;
+#light-btn{
+  color: var(--light);
+  opacity: 80%;
+  color: var(--light)
 }
 
-.scroll-button span::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  content: '';
-  width: 16px;
-  height: 16px;
-  margin: -12px 0 0 -8px;
-  border-left: 2px solid #0e2431;
-  border-bottom: 2px solid #0e2431;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
+
+#light-btn span {
+  border: 2px solid var(--light);
+}
+
+#light-btn span::after {
+  border-left: 2px solid var(--light);
+  border-bottom: 2px solid var(--light);
+  
 }
 
 .scroll-button span::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  content: '';
-  width: 44px;
-  height: 44px;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
-  border-radius: 100%;
-  opacity: 0;
-  -webkit-animation: sdb03 3s infinite;
-  animation: sdb03 10s infinite;
-  box-sizing: border-box;
-} */
+  box-shadow: 0 0 0 0 var(--light);
+}
 
 /*              Section 2-4 Styling        */
 
@@ -561,7 +526,7 @@ section .text-container .text-box p {
 
 #section4{
   align-items: flex-start;
-  height: 25vh;
+  height: 30vh;
 }
 
 .contact-container{
