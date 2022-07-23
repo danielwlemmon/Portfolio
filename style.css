@@ -18,10 +18,12 @@ body {
 }
 
 .wrapper {
-  width: 100%;
+  width: 200%;
   height: 100vh;
   overflow-y: visible;
 }
+
+
 
 .container {
   max-width: 1050px;
@@ -294,9 +296,10 @@ section {
   opacity: .5;
 }
 
-.scroll-button  {
+.scroll-button {
   padding-top: 60px;
 }
+
 .scroll-button span {
   position: absolute;
   top: 0;
@@ -359,11 +362,11 @@ section .text-container {
   display: flex;
 }
 
-.project-link{
-  text-decoration:none;
+.project-link {
+  text-decoration: none;
 }
 
-.project-link:hover{
+.project-link:hover {
   opacity: 80%;
 }
 
@@ -418,7 +421,7 @@ section .text-container .text-box p {
 }
 
 
-.container-3 h2{
+.container-3 h2 {
   color: var(--light);
   width: 60%;
   opacity: .9;
@@ -426,7 +429,7 @@ section .text-container .text-box p {
 }
 
 .text-container-3 {
-  display:flex;
+  display: flex;
 }
 
 .text-container-3 .text-box-3 {
@@ -445,16 +448,17 @@ section .text-container .text-box p {
 }
 
 
-#spotify{
+#spotify {
   opacity: 80%;
   width: 100px;
   padding-left: 37%;
 }
-#spotify:hover{
+
+#spotify:hover {
   opacity: 100%;
 }
 
-.text-box-3 img{
+.text-box-3 img {
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -466,24 +470,19 @@ section .text-container .text-box p {
   width: 550px;
 }
 
-@media (max-width: 900px) {
-  section .text-container-3 {
-    flex-direction: column;
-  }
-}
 
-.text-box-3 img{
+.text-box-3 img {
   opacity: 1;
   max-width: 250px;
 
   /*   light button styling for dark background */
 }
 
-#light-btn:hover{
+#light-btn:hover {
   opacity: .5;
 }
 
-#light-btn{
+#light-btn {
   color: var(--light);
   opacity: 80%;
   color: var(--light)
@@ -497,7 +496,7 @@ section .text-container .text-box p {
 #light-btn span::after {
   border-left: 2px solid var(--light);
   border-bottom: 2px solid var(--light);
-  
+
 }
 
 .scroll-button span::before {
@@ -509,7 +508,7 @@ section .text-container .text-box p {
 .sections2-4 {
   background-color: var(--light);
   z-index: -1;
-  
+
 }
 
 .section-img {
@@ -524,12 +523,12 @@ section .text-container .text-box p {
   opacity: 0.5;
 }
 
-#section4{
+#section4 {
   align-items: flex-start;
   height: 30vh;
 }
 
-.contact-container{
+.contact-container {
   margin-top: 5%;
   text-align: center;
   width: 50%;
@@ -539,6 +538,111 @@ section .text-container .text-box p {
   top: 70%;
   -webkit-transform: rotate(-225deg);
   transform: rotate(-225deg);
-  
+
 }
 
+
+@media only screen and (max-width:768px) {
+  /*        main styling      */
+  .wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  /*        hide title and image on small screen */
+
+  .logo {
+    display: none
+  }
+
+  .img-container {
+    display: none;
+  }
+
+  /*        page 1 styling changes     */
+
+  #main-text {
+    background-color: var(--light);
+  }
+
+  #main-text h3 {
+    font-size: 0.15em;
+  }
+
+  #main-text p {
+    font-size: .11em;
+  }
+
+  #text-container {
+    padding: 10px;
+  }
+
+  .section1 img {
+    height: 100%;
+  }
+
+  .navbar .menu-items {
+    width: 40%;
+  }
+
+  /*        hide scroll buttons on small screens */
+
+  .scroll-button {
+    display: none;
+  }
+
+  /*        section 2 styling      */
+
+  section .text-container .text-box h3 {
+    font-size: .8em;
+    margin-bottom: 0px;
+  }
+
+  section .text-container .text-box {
+    margin: 2px;
+    padding: 2px;
+  }
+
+  #section2 h2{
+    display: none;
+  }
+
+  #section2 .container {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  /*          section 3 styling        */
+
+  section .text-container-3 {
+    flex-direction: column;
+  }
+
+  .container-3 h2{
+    width: 100%;
+  }
+
+  .text-container-3 .text-box-3 {
+    margin: 0px;
+    padding-left: 20%;
+    margin-bottom: 5px;
+  }
+
+  .text-box-3 img {
+    opacity: 1;
+    max-width: 200px;
+  }
+
+  .text-container-3 .text-box-3 h3 {
+    font-size: .9em;
+  }
+
+  #music-production, #bowling{
+    display: none;
+  }
+
+  #section4{
+    height: 20vh;
+  }
+}
